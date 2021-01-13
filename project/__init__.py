@@ -5,7 +5,7 @@
 # @Software: PyCharm
 
 from flask import Flask
-from .robot import myrobot
+from .robots import myrobot
 from werobot.contrib.flask import make_view
 
 app = Flask(__name__)
