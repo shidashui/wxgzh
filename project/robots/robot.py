@@ -6,6 +6,7 @@
 
 from werobot import WeRoBot
 import re
+from .weather import get_weather
 
 myrobot = WeRoBot(enable_session=True,
                   token='spamtest',
@@ -34,5 +35,5 @@ myrobot = WeRoBot(enable_session=True,
 
 @myrobot.filter(re.compile(".*?天气.*?"), "天气")
 def wether(message):
-    return "晴天"
+    return get_weather()
 
